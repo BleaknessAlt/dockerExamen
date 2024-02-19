@@ -15,6 +15,8 @@ services:
     build: ./
     expose:
       - 8080
+    ports:
+      - 8080:8080
     image: mi-node-image
     networks:
       mongo-node-net:
