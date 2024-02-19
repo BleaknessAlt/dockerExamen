@@ -15,8 +15,6 @@ services:
     build: ./
     expose:
       - 8080
-    ports:
-      - 8080:8080
     image: mi-node-image
     networks:
       mongo-node-net:
@@ -26,7 +24,8 @@ services:
 
   nginx:
     container_name: mi-nginx
-    image: nginx
+    build: ./nginx/
+    image: mi-nginx-image
     ports:
       - 80:80
     networks:
